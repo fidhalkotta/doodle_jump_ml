@@ -15,14 +15,13 @@ public class LevelGenerator : MonoBehaviour {
 
 	[SerializeField] private float levelWidth = 3f;
 	[SerializeField] private float levelDepth = 6f;
-	[SerializeField] private float minY = .2f;
+	[SerializeField] private float minY = .75f;
 	[SerializeField] private float maxY = 1.5f;
 
 	// Use this for initialization
 	void Start ()
 	{
 		platforms = new List<GameObject>();
-		var spawnPosition = new Vector3();
 
 		while(topY < levelDepth)
 		{

@@ -681,6 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
+  levelWidth: 3
 --- !u!850595691 &1403192307
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -775,7 +776,7 @@ MonoBehaviour:
   cameraObject: {fileID: 138079533}
   levelWidth: 3
   levelDepth: 6
-  minY: 0.2
+  minY: 0.7
   maxY: 1.5
 --- !u!4 &1547923884
 Transform:

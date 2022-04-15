@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	[SerializeField] private float movementSpeed = 10f;
+	[SerializeField] private float levelWidth = 3f;
 
 	Rigidbody2D rb;
 
@@ -26,5 +27,14 @@ public class Player : MonoBehaviour {
 		var velocity = rb.velocity;
 		velocity.x = movement;
 		rb.velocity = velocity;
+
+		if (transform.position.x < -levelWidth)
+		{
+			transform.position = new Vector3(levelWidth, transform.position.y,transform.position.z);
+		}
+		else if (transform.position.x > levelWidth)
+		{
+			transform.position = new Vector3(-levelWidth, transform.position.y,transform.position.z);
+		}
 	}
 }
