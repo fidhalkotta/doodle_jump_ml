@@ -13,6 +13,7 @@ public class LevelGenerator : MonoBehaviour {
 
 	[SerializeField] private int numberOfPlatforms = 200;
 	[SerializeField] private float levelWidth = 3f;
+	[SerializeField] private float levelDepth = 6f;
 	[SerializeField] private float minY = .2f;
 	[SerializeField] private float maxY = 1.5f;
 
@@ -34,7 +35,7 @@ public class LevelGenerator : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
-		if (platforms[0].transform.position.y > cameraObject.transform.position.y - 5f) return;
+		if (platforms[0].transform.position.y > cameraObject.transform.position.y - levelDepth) return;
 		
 		Destroy(platforms[0]);
 		platforms.RemoveAt(0);
