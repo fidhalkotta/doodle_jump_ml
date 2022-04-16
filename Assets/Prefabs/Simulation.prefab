@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 3849207739159352141}
   - component: {fileID: 3849207739159352139}
   - component: {fileID: 7027659068891546251}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Doodler
   m_TagString: Untagged
   m_Icon: {fileID: 0}

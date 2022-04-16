@@ -12,8 +12,7 @@ public class DoodleJumpAgent : Agent
     //[SerializeField] private Rigidbody2D rb;
     [SerializeField] private LevelGenerator _levelGenerator;
     [SerializeField] private Background _background;
-    
-    
+    [SerializeField] private CameraFollow _camera;
 
     [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private float levelWidth = 3f;
@@ -38,6 +37,9 @@ public class DoodleJumpAgent : Agent
         rb.velocity = Vector2.zero;
         _levelGenerator.ResetPlatforms();
         _background.ResetBackground();
+        
+        if(_camera != null)
+            _camera.ResetCamera();
     }
 
     public override void OnActionReceived(ActionBuffers actions)
