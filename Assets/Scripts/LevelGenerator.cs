@@ -8,10 +8,9 @@ using Random = UnityEngine.Random;
 public class LevelGenerator : MonoBehaviour {
 
 	public GameObject platformPrefab;
-	public GameObject cameraObject;
 
 	private List<GameObject> platforms;
-	private float topY = 0f;
+	private float topY = -5f;
 
 	[SerializeField] private float levelWidth = 3f;
 	[SerializeField] private float levelDepth = 6f;
@@ -22,6 +21,39 @@ public class LevelGenerator : MonoBehaviour {
 	void Start ()
 	{
 		platforms = new List<GameObject>();
+		ResetPlatforms();
+	}
+
+	private void FixedUpdate()
+	{
+		if (platforms.Count == 0) return;
+		
+		if (platforms[0].transform.position.y < transform.position.y - levelDepth)
+		{
+			Destroy(platforms[0]);
+			platforms.RemoveAt(0);
+		}
+
+		if (platforms.Last().transform.position.y < transform.position.y + levelDepth)
+		{
+			AddNewPlatform();
+		}
+		
+		
+	}
+
+	public void ResetPlatforms()
+	{
+		
+		
+		foreach (var platform in platforms)
+		{
+			Destroy(platform.gameObject);
+		}
+		
+		platforms = new List<GameObject>();
+		
+		topY = -5f;
 
 		while(topY < levelDepth)
 		{
@@ -29,27 +61,11 @@ public class LevelGenerator : MonoBehaviour {
 		}
 	}
 
-	private void FixedUpdate()
-	{
-		if (platforms[0].transform.position.y < cameraObject.transform.position.y - levelDepth)
-		{
-			Destroy(platforms[0]);
-			platforms.RemoveAt(0);
-		}
-
-		if (platforms.Last().transform.position.y < cameraObject.transform.position.y + levelDepth)
-		{
-			AddNewPlatform();
-		}
-		
-		
-	}
-
 	private void AddNewPlatform()
 	{
 		var spawnPosition = new Vector3();
 		spawnPosition.y = topY + Random.Range(minY, maxY);
-		spawnPosition.x = Random.Range(-levelWidth, levelWidth);
+		spawnPosition.x = transform.position.x + Random.Range(-levelWidth, levelWidth);
 		var addedPlatform = Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
 			
 		platforms.Add(addedPlatform);

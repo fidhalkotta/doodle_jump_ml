@@ -1,0 +1,29 @@
+{
+    "DoodleJump": {
+        "checkpoints": [
+            {
+                "steps": 3849,
+                "file_path": "results\\Test11\\DoodleJump\\DoodleJump-3849.onnx",
+                "reward": 27.585322766254347,
+                "creation_time": 1650093458.2110982,
+                "auxillary_file_paths": [
+                    "results\\Test11\\DoodleJump\\DoodleJump-3849.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3849,
+            "file_path": "results\\Test11\\DoodleJump.onnx",
+            "reward": 27.585322766254347,
+            "creation_time": 1650093458.2110982,
+            "auxillary_file_paths": [
+                "results\\Test11\\DoodleJump\\DoodleJump-3849.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

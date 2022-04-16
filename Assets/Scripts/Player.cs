@@ -18,11 +18,11 @@ public class Player : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	private void Update () {
 		movement = Input.GetAxis("Horizontal") * movementSpeed;
 	}
 
-	void FixedUpdate()
+	private void FixedUpdate()
 	{
 		var velocity = rb.velocity;
 		velocity.x = movement;

@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1650093240",
+        "python_version": "3.8.0 (tags/v3.8.0:fa919fd, Oct 14 2019, 19:37:50) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\fidha\\UnityProjects\\DoodleJump\\venv\\Scripts\\mlagents-learn --run-id=Test10",
+        "mlagents_version": "0.29.0",
+        "mlagents_envs_version": "0.29.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.0+cu110",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1650093246"
+    },
+    "total": 5.7442673,
+    "count": 1,
+    "self": 0.16445299999999996,
+    "children": {
+        "run_training.setup": {
+            "total": 0.04796709999999993,
+            "count": 1,
+            "self": 0.04796709999999993
+        },
+        "TrainerController.start_learning": {
+            "total": 5.5318472,
+            "count": 1,
+            "self": 0.00024809999999853005,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 5.531579300000001,
+                    "count": 1,
+                    "self": 5.531579300000001
+                },
+                "TrainerController._save_models": {
+                    "total": 1.980000000045834e-05,
+                    "count": 1,
+                    "self": 1.980000000045834e-05
+                }
+            }
+        }
+    }
+}
