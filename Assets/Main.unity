@@ -179,6 +179,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 138079533}
     - target: {fileID: 3849207739159352138, guid: 4c00d805061c8ae4ea380d4b3b3620eb, type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 5ff656ff6a9bb1a49a5fbba44f848576, type: 3}
+    - target: {fileID: 3849207739159352138, guid: 4c00d805061c8ae4ea380d4b3b3620eb, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 1
       objectReference: {fileID: 0}
@@ -304,17 +308,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138079533}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 925e3afdbaab0b44f8b06e3b506e2188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 468512321}
---- !u!4 &468512321 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3849207739159352129, guid: 4c00d805061c8ae4ea380d4b3b3620eb, type: 3}
-  m_PrefabInstance: {fileID: 31795006}
-  m_PrefabAsset: {fileID: 0}
+  target: {fileID: 1307164327}
 --- !u!1001 &798372678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -380,6 +379,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c00d805061c8ae4ea380d4b3b3620eb, type: 3}
+--- !u!4 &1307164327 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3849207739159352129, guid: 4c00d805061c8ae4ea380d4b3b3620eb, type: 3}
+  m_PrefabInstance: {fileID: 3849207738142731750}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &1403192307
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -643,6 +647,10 @@ PrefabInstance:
       propertyPath: m_Model
       value: 
       objectReference: {fileID: 5022602860645237092, guid: 5ff656ff6a9bb1a49a5fbba44f848576, type: 3}
+    - target: {fileID: 3849207739159352138, guid: 4c00d805061c8ae4ea380d4b3b3620eb, type: 3}
+      propertyPath: m_BehaviorType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3849207739159352139, guid: 4c00d805061c8ae4ea380d4b3b3620eb, type: 3}
       propertyPath: m_MaxRayDegrees
       value: 180
@@ -666,7 +674,7 @@ PrefabInstance:
     - target: {fileID: 3849207739159352141, guid: 4c00d805061c8ae4ea380d4b3b3620eb, type: 3}
       propertyPath: _camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 138079538}
     - target: {fileID: 3849207739159352143, guid: 4c00d805061c8ae4ea380d4b3b3620eb, type: 3}
       propertyPath: m_Enabled
       value: 1
